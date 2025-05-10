@@ -16,7 +16,12 @@ Once the image is built run the container.
 docker comopose up
 ```
 
-The react app was started with the command:
+The page should be visible via the Vite server
+```sh
+http://localhost:5173/
+```
+
+The react app was scafolded with the command:
 ```sh
 npm create vite@latest my-app -- --template react
 ```
