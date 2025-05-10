@@ -1,0 +1,15 @@
+services:
+  node-server:
+    container_name: node-for-react-sandbox-app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - .:/my-app
+      - /my-app/node_modules
+    ports: # use if it is necessary to expose the container to the host machine
+      - "5173:5173"
+      - "4173:4173"
